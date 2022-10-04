@@ -1,20 +1,18 @@
 public class Main {
 
     public static void main(String[] args) {
+        Author jamesKlawel = new Author("James", "Klawel");
+        Author rodgerZhelyazni = new Author("Rodjer", "Zhelyazni");
 
-        Book segun = new Book("Segun", 2007);
-        segun.name = "Segun";
+        Book segun = new Book("Segun", jamesKlawel, 2007);
         segun.publishYear = 2007;
-        segun.author = new Author("James", "Klawel");
-        System.out.println("Книга: " + segun.getName() + " " + segun.getPublishYear() + " " + segun.author.getAuthorName() + " " + segun.author.getAuthorSurname());
+        System.out.println(segun);
         segun.setPublishYear(2009);
         System.out.println("segun.getPublishYear() = " + segun.getPublishYear());
 
-        Book chonicsOfAmber = new Book("Chronics of Amber", 2010);
-        chonicsOfAmber.name = "Chronics of Amber";
+        Book chonicsOfAmber = new Book("Chronics of Amber", rodgerZhelyazni, 2010);
         chonicsOfAmber.publishYear = 2010;
-        chonicsOfAmber.author = new Author("Rodjer", "Zhelyazni");
-        System.out.println("Книга: " + chonicsOfAmber.getName() + " " + chonicsOfAmber.getPublishYear() + " " + chonicsOfAmber.author.getAuthorName() + " " + chonicsOfAmber.author.getAuthorSurname());
+        System.out.println(chonicsOfAmber);
 
     }
 }
